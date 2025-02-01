@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+    /* Light, clean background */
+}
+
+.calculator {
+    border-radius: 16px;
+    background: #2e2e2e;
+    /* Darker background for the calculator */
+    padding: 30px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+    /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    background: #1c1c1c;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: right;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    /* Light shadow for input field */
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+    /* Glowing effect on focus */
+}
+
+input::placeholder {
+    color: #b3b3b3;
+}
+
+button {
+    border: none;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    background: #4b4b4b;
+    /* Subtle button background */
+    color: #ffffff;
+    font-size: 24px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #5e5e5e;
+    /* Slightly lighter on hover */
+    transform: scale(1.1);
+    /* Grow on hover */
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+.equalBtn {
+    background-color: #00b894;
+    /* Green for equal button */
+    transition: all 0.3s ease;
+}
+
+.equalBtn:hover {
+    background-color: #00b382;
+    /* Darker green on hover */
+}
+
+.operator {
+    background-color: #f39c12;
+    /* Orange for operator buttons */
+}
+
+.operator:hover {
+    background-color: #e67e22;
+    /* Darker orange on hover */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.calculator div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    input {
+        font-size: 30px;
+        padding: 18px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    input {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .calculator {
+        padding: 15px;
+    }
+}
